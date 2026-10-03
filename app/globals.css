@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 浅色：米白底 + 炭黑字 */
+  --background: 42 33% 95%;
+  --foreground: 214 24% 8%;
+  --card: 42 30% 97%;
+  --border: 216 14% 84%;
+  --muted: 216 12% 40%;
+  --amber: 42 54% 54%;
+  --amber-deep: 40 56% 42%;
+  --navy: 214 32% 17%;
+  --ink: 214 24% 8%;
+  --paper: 42 33% 95%;
+}
+
+.dark {
+  /* 暗色：炭黑底 + 米白字 */
+  --background: 214 24% 8%;
+  --foreground: 42 33% 95%;
+  --card: 214 30% 12%;
+  --border: 216 16% 22%;
+  --muted: 42 22% 74%;
+  --amber: 42 54% 58%;
+  --amber-deep: 42 56% 62%;
+  --navy: 214 32% 20%;
+  --ink: 214 24% 8%;
+  --paper: 42 33% 95%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans), var(--font-sans-cn), system-ui, sans-serif;
+  }
+  ::selection {
+    background: hsl(var(--amber) / 0.35);
+  }
+  [id] {
+    scroll-margin-top: 96px;
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--amber));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-serif-latin), var(--font-serif), Georgia, serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .hairline {
+    height: 1px;
+    background: hsl(var(--border));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
