@@ -137,8 +137,10 @@ export const profile = {
       action:
         "作为联合创始人兼 CEO，负责投融资、战略、品牌与生态；以游戏为切入点做大用户增量，平台期后链接 C 端、对接 B 端与 G 端。",
       result: [
-        { type: "text", content: "[占位：可公开的用户规模 / 增速等数字，待补充]" },
-      ] as ResultBlock[], // ← 替换为可公开结果
+        { type: "text", content: "上线早期即积累种子用户 " },
+        { type: "metric", value: 160, suffix: "+" },
+        { type: "text", content: "，验证了以游戏切入的用户增长路径。" },
+      ] as ResultBlock[],
     },
     {
       title: "腾跃数智教育中心 · 寒假班",
