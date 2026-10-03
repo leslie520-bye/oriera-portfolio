@@ -17,7 +17,7 @@ export const profile = {
   role: "联合创始人兼 CEO",
   tagline: "一个从不停歇、爱折腾的 03 年连续创业者",
   taglineEn: "From Origin, A New Era",
-  siteUrl: "https://oriera.example.com", // ← 部署后替换为你的正式域名
+  siteUrl: "https://oriera-portfolio1.vercel.app",
 
   /** SEO */
   seoDescription:
